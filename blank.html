@@ -1,17 +1,54 @@
 <!DOCTYPE html>
 <html>
+    <script src="script.jss"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.png" type= "image/x-icon">
+
     <head>
         <meta charset="utf-8">
+        <title>RockPaperScissors?!!</title>
     </head>
+    
     <body>
-        <div class = header>
-            <h1>rockPaperScissors</h1>
+        <h1>RockPaperScissors?!!</h1>
+
+        <div id= "view">
+            <img id= "winView" class= "hide" src= "images/win.gif">
+            <img id= "loseView" class= "hide" src= "images/lose.png">
         </div>
-        
-        <script>
-        function computerPlay(){
-            return 
-        }
-        </script>
+
+        <div id="start">
+            <h2>Select your weapon</h2>
+            <img onclick="playRound('rock')" src="images/rock.jpeg">
+            <img onclick="playRound('paper')" src="images/paper.jpeg">
+            <img onclick="playRound('scissors')" src="images/scissors.jpeg">
+        </div>
+
+        <form id="results">
+            <h3 id="text">Human //vs// Computer, best of 5 wins!</h3>
+            <p>Round: 
+                <span id="roundCount">0</span>
+            </p>
+            <div id="scores">
+                <p>You: <span id="playerWins">0</span> &nbsp;
+                   Computer: <span id="computerWins">0</span> &nbsp;
+                   Tie: <span id="tied">0</span>
+                </p><br>
+            </div>
+            <button onclick="resetButton()">Reset</button>
+        </form>
+        <div id="about">
+            <h3>Facts:</h3>
+            <p>Did you know that this game first appeared when the Chinese Emperor wanked to death to an Area 51 alien freed in the 21st Century (206 BC - 220 BC).</p>
+            <p>Statistics say that people are more prone to wanking when they are on the internet.</p>
+        </div>
+
+        <footer>
+            <p>
+                Made by: <a href="https://">vector pBR322</a> for <a href="https://www.theodinproject.com">
+                The Odin Project</a> 
+            </p>
+        </footer>
+
     </body>
 </html>
